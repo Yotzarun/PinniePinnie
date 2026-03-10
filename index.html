@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Pin 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Itim', sans-serif;
+    background: linear-gradient(135deg, #c8a2ff, #f3e8ff);
+    text-align: center;
+    color: #6a1b9a;
+    overflow-x: hidden;
+}
+
+.rabbit {
+    position: fixed;
+    font-size: 22px;
+    opacity: 0.15;
+    animation: floatRabbit 20s linear infinite;
+}
+
+@keyframes floatRabbit {
+    0% { transform: translateY(110vh) rotate(0deg); }
+    100% { transform: translateY(-120vh) rotate(360deg); }
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 4px 12px rgba(138,43,226,0.6);
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.image-box img {
+    width: 320px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(138,43,226,0.4);
+    border: 6px solid #b388ff;
+}
+
+.blessing {
+    margin-top: 40px;
+    padding: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255,255,255,0.9);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(138,43,226,0.2);
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.footer {
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+.heart {
+    font-size: 28px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.heart-float {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 8s linear infinite;
+    color: #ba68c8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Happy Birthday Pin 💜</h1>
+<div class="subtitle">May your day be as beautiful as your smile ✨</div>
+
+<div class="image-box">
+<img src="Pinnie.png" alt="Pin">
+</div>
+
+<div class="blessing">
+
+<p>
+สุขสันต์วันเกิดนะพิณ
+ขอให้วันเกิดปีนี้เต็มไปด้วยความสุข รอยยิ้ม และเรื่องราวดี ๆ เลยนะ ขอบคุณตัวเองเยอะ ๆ 🌸
+</p>
+
+<p>
+ขอให้ทุกวันของพิณมีแต่สิ่งดี ๆ เข้ามา  
+ได้ทำในสิ่งที่ชอบ ได้กินของอร่อย และมีคนที่รักอยู่รอบตัวเสมอ
+</p>
+
+<p>
+ขอบคุณที่เกิดมาให้โลกนี้มีคนที่น่ารักแบบนี้นะ 💜
+</p>
+
+<p class="heart">💜💜💜</p>
+
+</div>
+
+<div class="footer">
+Made with love and purple magic ✨
+</div>
+
+</div>
+
+<script>
+function createHeart() {
+const heart = document.createElement("div");
+heart.classList.add("heart-float");
+heart.style.left = Math.random()*100 + "vw";
+heart.style.animationDuration = (5+Math.random()*5)+"s";
+heart.innerHTML="💜";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},8000);
+}
+setInterval(createHeart,800);
+
+function createRabbit() {
+const rabbit=document.createElement("div");
+rabbit.classList.add("rabbit");
+rabbit.style.left=Math.random()*100+"vw";
+rabbit.style.animationDuration=(15+Math.random()*10)+"s";
+rabbit.innerHTML="🐰";
+document.body.appendChild(rabbit);
+
+setTimeout(()=>{rabbit.remove();},25000);
+}
+setInterval(createRabbit,2000);
+</script>
+
+</body>
+</html>
